@@ -1,4 +1,12 @@
 #include <stdio.h>
-int main(void) 
+/**
+ * main - prints the alphabet in lowercase, followed by a new line.
+ * Return: 0
+ */
+int main(void)
 {
+	int c = 97;
+	for (c; c < 123; c++)
+		putchar(c);
+	putchar('\n');
 }
