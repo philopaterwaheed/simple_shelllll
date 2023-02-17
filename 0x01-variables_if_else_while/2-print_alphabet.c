@@ -6,6 +6,7 @@
 int main(void)
 {
 	int c = 97;
+	
 	for (; c < 123; c++)
 		putchar(c);
 	putchar('\n');
