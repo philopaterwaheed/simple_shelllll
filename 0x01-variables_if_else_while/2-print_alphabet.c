@@ -9,4 +9,5 @@ int main(void)
 	for (c; c < 123; c++)
 		putchar(c);
 	putchar('\n');
+	return (0);
 }
