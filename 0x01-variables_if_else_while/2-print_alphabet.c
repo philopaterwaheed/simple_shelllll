@@ -6,7 +6,7 @@
 int main(void)
 {
 	int c = 97;
-	for (c; c < 123; c++)
+	for (; c < 123; c++)
 		putchar(c);
 	putchar('\n');
 	return (0);
