@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * main - simple function prints the size of types on the computer
  * Return: 0 exit code
  */
