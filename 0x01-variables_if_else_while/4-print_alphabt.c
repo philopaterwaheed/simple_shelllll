@@ -9,10 +9,10 @@ int main(void)
 
 	for (c = 97; c < 123; c++)
 	{
-		if ( c >= 101 && c <= 113)
+		if (c >= 101 && c <= 113)
 			continue;
 		putchar(c);
-		putchar('\n');
 	}
+	putchar('\n');
 	return (0);
 }
