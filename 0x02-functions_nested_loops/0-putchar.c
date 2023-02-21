@@ -9,8 +9,8 @@ int main(void)
 	char msg[64] = "_putcahr";
 
 	for (i = 0; i < 8; i++)
-		_putschar(msg[i]);
+		_putchar(msg[i]);
 
-	_putschar('\n');
+	_putchar('\n');
 	return (0);
 }
