@@ -6,7 +6,7 @@
 int main(void)
 {
 	int i;
-	char msg[64] = "_putcahr";
+	char *msg = "_putcahr";
 
 	for (i = 0; i < 8; i++)
 		_putchar(msg[i]);
