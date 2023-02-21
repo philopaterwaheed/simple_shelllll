@@ -1,9 +1,10 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing 
-* Return: 0
+* islower - does some thing
+* Return: 1 on sucess
+* Return: 0 on fail
 */
-int main(void)
+int main (int c)
 {
-	return (0);
+	return (c >= 97 && c<=122 ? 1 : 0);
 }
