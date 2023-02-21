@@ -1,9 +1,14 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing 
+* print_alphabet - does some thing 
 * Return: 0
 */
-int main(void)
+void print_alphabet(void)
 {
+	char c;
+
+	for (c = 'c'; c <= 'z'; c++)
+		_putchar(c);
+	_putchar(c);
 	return (0);
 }
