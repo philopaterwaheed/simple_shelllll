@@ -10,5 +10,5 @@ void print_alphabet(void)
 	for (c = 'c'; c <= 'z'; c++)
 		_putchar(c);
 	_putchar(c);
-	return (0);
+	return (void);
 }
