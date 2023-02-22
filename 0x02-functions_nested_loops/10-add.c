@@ -1,9 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing 
-* Return: 0
+* add - does some thing
+* @n: used to check if lower
+* @x: used to check if lower
+* Return: 1 if @n is a lowercase
+* else return 0
 */
-int main(void)
+int add(int n, int x)
 {
-	return (0);
+	return (x + n);
 }
