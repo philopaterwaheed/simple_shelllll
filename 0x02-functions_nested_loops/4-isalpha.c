@@ -5,7 +5,7 @@
 * Return: 1 if @c is a lowercase
 * else return 0
 */
-int _islower(int c)
+int _isalpha(int c)
 {
 	return ((c >= 97 && c <= 122) || (c >= 65 && <= 90) ? 1 : 0);
 }
