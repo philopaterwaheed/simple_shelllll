@@ -1,9 +1,11 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing 
-* Return: 0
+* print_to_98 - does some thing
+* @n: used to check if lower
+* Return: 0 
 */
-int main(void)
+void print_to_98(int n)
 {
-	return (0);
+	for (n; n < 98 ; n++)
+		_putchar(n+'0');
 }
