@@ -6,6 +6,21 @@
 */
 void print_to_98(int n)
 {
-	for (n; n < 98 ; n++)
-		_putchar(n+'0');
+	int d, i;
+
+	d = n < 98 ? 1 : -1;
+	i = n;
+	while (1)
+	{
+		_putchar(i+'0');
+		if (i != 98)
+			printf(", ");
+		else
+		{
+			printf("\n");
+			break;
+		}
+
+		i += d;
+	}
 }
