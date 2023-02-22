@@ -13,7 +13,7 @@ void print_to_98(int n)
 	i = n;
 	while (1)
 	{
-		_putchar((char)i);
+		printf("%d" ,i);	
 		if (i != 98)
 			printf(", ");
 		else
