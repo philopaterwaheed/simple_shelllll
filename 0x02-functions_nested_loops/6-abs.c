@@ -5,7 +5,7 @@
 * Return: 1 if @n is a lowercase
 * else return 0
 */
-int print_sign(int n)
+int _abs(int n)
 {
 	if (n >= 0)
 	{
