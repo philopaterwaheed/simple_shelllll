@@ -1,9 +1,18 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing 
-* Return: 0
+* _abs - does some thing
+* @n: used to check if lower
+* Return: 1 if @n is a lowercase
+* else return 0
 */
-int main(void)
+int print_sign(int n)
 {
-	return (0);
+	if (n >= 0)
+	{
+		return (n);
+	}
+	else if (n < 0)
+	{
+		return (-n);
+	}
 }
