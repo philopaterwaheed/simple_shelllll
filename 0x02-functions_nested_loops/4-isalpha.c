@@ -1,9 +1,11 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing 
-* Return: 0
+* _islower - does some thing
+* @c: used to check if lower
+* Return: 1 if @c is a lowercase
+* else return 0
 */
-int main(void)
+int _islower(int c)
 {
-	return (0);
+	return ((c >= 97 && c <= 122) || (c >= 65 && <= 90) ? 1 : 0);
 }
