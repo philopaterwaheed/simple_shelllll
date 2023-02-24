@@ -1,9 +1,10 @@
 #include "main.h"
+
 /**
-* print_diagonal - does some thing
-* @n: the character to check
-* Return: 0
-*/
+ * print_diagonal - print diagonal line of length @n lines
+ * @n: the number of lines that contains the diagonal
+ * Return: void
+ */
 void print_diagonal(int n)
 {
 	int i, j;
@@ -11,9 +12,9 @@ void print_diagonal(int n)
 	if (n <= 0)
 	{
 		_putchar('\n');
-		return
+		return;
 	}
-	
+
 	for (i = 0; i < n; i++)
 	{
 		for (j = 0; j < i; j++)
@@ -22,5 +23,4 @@ void print_diagonal(int n)
 		_putchar('\\');
 		_putchar('\n');
 	}
-	return;
 }
