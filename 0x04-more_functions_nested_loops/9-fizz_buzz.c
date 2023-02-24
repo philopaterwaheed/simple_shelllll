@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - does something
+ * main - print 0..100, with Fizz, Buzz for multiples of 3, 5
  * Return: void
  */
 int main(void)
@@ -12,9 +12,9 @@ int main(void)
 	{
 		if (i % 3 == 0)
 			printf("Fizz");
-		else if (i % 5 == 0)
+		if (i % 5 == 0)
 			printf("Buzz");
-		else
+		if (i % 3 != 0 && i % 5 != 0)
 			printf("%d", i);
 
 		printf("%c", i < 100 ? ' ' : '\n');
