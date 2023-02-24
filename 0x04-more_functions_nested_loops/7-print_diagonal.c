@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-* print_diagonally - does some thing
+* print_diagonal - does some thing
 * @n: the character to check
 * Return: 0
 */
-void print_diagonally(int n)
+void print_diagonal(int n)
 {
 	int i;
 
