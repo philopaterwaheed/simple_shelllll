@@ -1,9 +1,11 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
+* _isdigit - does some thing
+* @a: the character to check
+* @b: the character to check
 * Return: 0
 */
-int main(void)
+int _mul(int a, int b)
 {
-	return (0);
+	return (a * b);
 }
