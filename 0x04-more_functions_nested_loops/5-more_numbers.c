@@ -1,17 +1,23 @@
 #include "main.h"
 /**
-* print_most_numbers - does some thing
+* more_numbers - does some thing
 * Return: 0
 */
-void print_most_numbers(void)
+void more_numbers(void)
 {
-	char i;
+	char i, j, a, b;
 
-	for (i = '0'; i <= '9'; i++)
+	for (i = 0; i < 10; i++)
 	{
-		if (i == '2' || i == '4')
-			continue;
-		_putchar(i);
+		for (j = 0; j <= 14; j++)
+		{
+			a = j / 10;
+			b = j % 10;
+
+			if (j >= 10)
+				_putchar(a + '0');
+			_putchar(b + '0');
+		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
