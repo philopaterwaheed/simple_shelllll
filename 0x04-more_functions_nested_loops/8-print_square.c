@@ -1,9 +1,25 @@
-#include <stdio.h>
+
+#include "main.h"
+
 /**
-* main - does some thing
-* Return: 0
-*/
-int main(void)
+ * print_square - print a square using # 
+ * @size: the size of the square
+ * Return: void
+ */
+void print_square(int size)
 {
-	return (0);
+	int i, j;
+
+	if (size <= 0)
+	{
+		_putchar('\n');
+		return;
+	}
+
+	for (i = 0; i < size; i++)
+	{
+		for (j = 0; j < size; j++)
+			_putchar('#');
+		_putchar('\n');
+	}
 }
