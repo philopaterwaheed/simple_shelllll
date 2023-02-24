@@ -1,9 +1,24 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
+* print_diagonally - does some thing
+* @n: the character to check
 * Return: 0
 */
-int main(void)
+void print_diagonally(int n)
 {
-	return (0);
+	int i;
+
+	if (n < 0)
+	{
+		_putchar('\n');
+		return
+	}
+	for (i = 0; i < n; i++)
+	{
+		for (j = 0; j < i; j++)
+			_putchar(' ');
+
+		_putchar('\\');
+		_putchar('\n');
+	}
 }
