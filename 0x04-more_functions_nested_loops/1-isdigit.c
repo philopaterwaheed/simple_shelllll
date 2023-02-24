@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-* _isupper - does some thing
+* _isdigit - does some thing
 * @c: the character to check
 * Return: 0
 */
-int _isupper(int c)
+int _isdigit(int c)
 {
-	return (c >= 'A' && c <= 'Z');
+	return (c >= '0' && c <= '9');
 }
