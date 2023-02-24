@@ -1,9 +1,10 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
+* _isupper - does some thing
+* @c: the character to check
 * Return: 0
 */
-int main(void)
+int _isupper(int c)
 {
-	return (0);
+	return (c >= 'A' && c <= 'Z');
 }
