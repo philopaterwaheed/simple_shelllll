@@ -1,9 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
+* print_numbers - does some thing
 * Return: 0
 */
-int main(void)
+void print_numbers(void)
 {
-	return (0);
+	char i;
+
+	for (i = '0'; i <= '9'; i++)
+		_putchar(i);
+	_putchar('\n');
 }
