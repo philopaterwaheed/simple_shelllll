@@ -1,9 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
+* print_line - does some thing
+* @n: the character to check
 * Return: 0
 */
-int main(void)
+void print_line(int n)
 {
-	return (0);
+	char i;
+
+	for (i = 0; i <= n; i++)
+	{
+		_putchar('_');
+	}
+	_putchar('$');
+	_putchar('\n');
 }
