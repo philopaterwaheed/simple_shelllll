@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * largest_number - returns the largest 
- * @a: first 
+ * largest_number - returns the largest
+ * @a: first
  * @b: second 
  * @c: third 
  * Return: largest 
