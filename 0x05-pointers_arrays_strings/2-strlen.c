@@ -9,7 +9,7 @@ int _strlen(char *s)
 	int i; 
 	int size = 0;
 	
-	while(ture)
+	while(1)
 	{
 		if (*(s++) != NULL)
 			size++;
