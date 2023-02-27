@@ -9,12 +9,9 @@ int _strlen(char *s)
 	int i = 0;
 	int size = 0;
 	
-	while(1)
+	while(*(s++) != '\0')
 	{
-		if (*(s + ++i) != '\n')
 			size++;
-		else
-			break;
 	}
 	return (size);	
 }
