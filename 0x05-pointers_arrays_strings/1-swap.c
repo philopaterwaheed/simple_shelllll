@@ -1,9 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
+* swap_int - does some thing
+* @a: ptr1
+* @b: ptr2        
 * Return: 0
 */
-int main(void)
+void swap_int(int *n)
 {
-	return (0);
+	int tmp = *a;
+	*a = *b;
+	*b = tmp;	
 }
