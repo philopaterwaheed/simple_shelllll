@@ -10,7 +10,7 @@ int _strlen(char *s)
 	
 	while(1)
 	{
-		if (*(s++) != NULL)
+		if (*(s++) != '\n')
 			size++;
 		else
 			break;
