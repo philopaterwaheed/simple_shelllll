@@ -1,9 +1,20 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
-* Return: 0
+* _strlen - does some thing
+* @u: ptr1
+* Return: len
 */
-int main(void)
+int _strlen(char *s)
 {
-	return (0);
+	int i; 
+	int size = 0;
+	
+	while(ture)
+	{
+		if (*(s++) != NULL)
+			size++;
+		else
+			break;
+	}
+	return (size);	
 }
