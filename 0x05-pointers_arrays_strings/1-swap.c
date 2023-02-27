@@ -5,7 +5,7 @@
 * @b: ptr2        
 * Return: 0
 */
-void swap_int(int *n)
+void swap_int(int *a, int *b)
 {
 	int tmp = *a;
 	*a = *b;
