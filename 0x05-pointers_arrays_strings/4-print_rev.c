@@ -1,9 +1,30 @@
-#include <stdio.h>
+
+#include "main.h"
+
 /**
-* main - does some thing
-* Return: 0
-*/
-int main(void)
+ * rev_string - reverse string
+ * @s: the reference
+ */
+void rev_string(char *s)
 {
-	return (0);
+	int len = 0, i, mid;
+	char c = *s;
+
+	while (c != '\0')
+		c = *(s + ++len);
+
+	if (len == 0)
+		return;
+
+	mid = len / 2;
+	
+	for (i = 0; i < mid; i++)
+	{
+		char tmp;
+		int x = len - i - 1;
+
+		tmp = *(s + i);
+		*(s + i) = *(s + x);
+		*(s + x) = tmp;
+	}
 }
