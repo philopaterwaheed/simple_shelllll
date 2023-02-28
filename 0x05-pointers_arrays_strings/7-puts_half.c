@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * puts_half - reverse string
- * @s: the reference to the string
+ * @str: the reference to the string
  */
 void puts_half(char *str)
 {
