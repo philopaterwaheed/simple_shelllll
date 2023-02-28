@@ -1,9 +1,21 @@
-#include <stdio.h>
 /**
-* main - does some thing
-* Return: 0
-*/
-int main(void)
+ * _strcpy - copies the string
+ * @dest: the reference to copy
+ * @src: the reference to copy from
+ * Return: the reference
+ */
+char *_strcpy(char *dest, char *src)
 {
-	return (0);
+	int i;
+	char c;
+
+	i = 0;
+	while (1)
+	{
+		c = *(src + i);
+		*(dest + i++) = c;
+		if (c == '\0')
+			break;
+	}
+	return (dest);
 }
