@@ -1,19 +1,18 @@
 #include <stdio.h>
-#include "main.h"
+
 /**
-* print_array - does some thing
-* @a: ptr1
-* @n: size
-* Return: len
-*/
+ * print_array - print @n elements of @a
+ * @a: reference to an array of integers
+ * @n: the number of elemenets to be printed
+ */
 void print_array(int *a, int n)
 {
-	int i = 0;
+	int i;
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%d", *(a + i));
-		if (i < n-1)
+		printf("%d", a[i]);
+		if (i < n - 1)
 			printf(", ");
 	}
 	printf("\n");
