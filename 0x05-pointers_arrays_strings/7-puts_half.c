@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * rev_string - reverse string
+ * puts_half - reverse string
  * @s: the reference to the string
  */
-void rev_string(char *s)
+void puts_half(char *s)
 {
 	int len = 0, i, mid;
 	char c = *s;
