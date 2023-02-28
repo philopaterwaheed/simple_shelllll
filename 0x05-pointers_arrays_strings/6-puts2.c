@@ -1,9 +1,21 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
-* Return: 0
+* puts2 - does some thing
+* @s: ptr1
+* Return: len
 */
-int main(void)
+void puts2(char *s)
 {
-	return (0);
+	int i = 0;
+	char c = *s;
+
+	while (1)
+	{
+		c = *(s + i++);
+		if (c == '\0')
+			break;
+		if (i % 2 == 0)
+			_putchar(c);
+	}
+	_putchar('\n');
 }
