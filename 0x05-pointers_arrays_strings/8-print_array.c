@@ -2,7 +2,8 @@
 #include "main.h"
 /**
 * print_array - does some thing
-* @s: ptr1
+* @a: ptr1
+* @n: size
 * Return: len
 */
 void print_array(int *a, int n)
@@ -14,6 +15,5 @@ void print_array(int *a, int n)
 		printf("%d, ", *(a + i));
 	}
 
-	printf("%d", *(a + n-1 ));
-	_putchar('\n');
+	printf("%d\n", *(a + n-1 ));
 }
