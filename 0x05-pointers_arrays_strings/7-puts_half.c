@@ -3,13 +3,13 @@
  * puts_half - reverse string
  * @s: the reference to the string
  */
-void puts_half(char *s)
+void puts_half(char *str)
 {
 	int len = 0, i, mid;
 	char c = *s;
 
 	while (c != '\0')
-		c = *(s + ++len);
+		c = *(str + ++len);
 
 	if (len == 0)
 		return;
@@ -18,7 +18,7 @@ void puts_half(char *s)
 
 	for (i = mid; i < len; i++)
 	{
-		_putchar(*(s + i));
+		_putchar(*(str + i));
 	}
 	_putchar('\n');
 }
