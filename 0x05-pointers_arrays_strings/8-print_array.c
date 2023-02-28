@@ -1,9 +1,16 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
-* Return: 0
+* print_array - does some thing
+* @s: ptr1
+* Return: len
 */
-int main(void)
+void print_array(int *a, int n)
 {
-	return (0);
+	int i = 0;
+
+	for (i = 0; i <n; i++)
+	{
+		printf ("%d", *(a + i));
+	}
+	_putchar('\n');
 }
