@@ -2,7 +2,7 @@
 * _strcat - does some thing
 * @dest: detneation
 * @src:	sourc
-* Return: @dest 
+* Return: @dest
 */
 char *_strcat(char *dest, char *src)
 {
