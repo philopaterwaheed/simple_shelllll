@@ -13,6 +13,6 @@ char *_strncat(char *dest, char *src, int n)
 		dest++;
 	for (i = 0; i <= n && *src; src++, dest++)
 		*dest = *src;
-	*(++dest) = 0;
+	*dest = 0;
 	return (r);
 }
