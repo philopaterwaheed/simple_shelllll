@@ -2,12 +2,13 @@
 * _strncat - does some thing
 * @dest: detneation
 * @src:	sourc
+* @n: n
 * Return: @dest
 */
 char *_strncat(char *dest, char *src, int n)
 {
 	char *r = dest;
-	int i = 0;
+	int i;
 
 	while (*dest != 0)
 		dest++;
