@@ -1,9 +1,18 @@
-#include <stdio.h>
 /**
-* main - does some thing
-* Return: 0
+* _strncat - does some thing
+* @dest: detneation
+* @src:	sourc
+* Return: @dest
 */
-int main(void)
+char *_strncat(char *dest, char *src, int n)
 {
-	return (0);
+	char *r = dest;
+	int i = 0;
+
+	while (*dest != 0)
+		dest++;
+	for (i = 0; i <= n && *src; src++, dest++)
+		*dest = *src;
+	*(++dest) = 0;
+	return (r);
 }
