@@ -1,9 +1,17 @@
-#include <stdio.h>
 /**
-* main - does some thing
-* Return: 0
+* _strncpy - does some thing
+* @dest: detneation
+* @src:	sourc
+* @n: n
+* Return: @dest
 */
-int main(void)
+char *_strncpy(char *dest, char *src, int n)
 {
-	return (0);
+	char *r = dest;
+	int i;
+
+	for (i = 0; i < n && *src; src++, dest++, i++)
+		*dest = *src;
+	*dest = 0;
+	return (r);
 }
