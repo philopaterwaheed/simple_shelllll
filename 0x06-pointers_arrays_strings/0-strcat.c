@@ -7,7 +7,7 @@
 char *_strcat(char *dest, char *src)
 {
 	char *r = dest;
-	
+
 	while (*dest != 0)
 		dest++;
 	for (; *src; src++, dest++)
