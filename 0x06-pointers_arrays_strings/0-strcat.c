@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include "main.h"
 /**
-* main - does some thing
+* _strcat - does some thing
 * @dest: detneation
 * @src:	sourc
 * Return: 0
