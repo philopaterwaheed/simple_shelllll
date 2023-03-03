@@ -1,7 +1,7 @@
 /**
 * _strcmp - does some thing
-* @dest: detneation
-* @src:	sourc
+* @s1: detneation
+* @s2:	sourc
 * Return: @dest
 */
 int _strcmp(char *s1, char *s2)
