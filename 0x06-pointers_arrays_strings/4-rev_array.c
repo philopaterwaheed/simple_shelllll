@@ -1,9 +1,18 @@
-#include <stdio.h>
 /**
-* main - does some thing
-* Return: 0
+* reverse_array - does some thing
+* @a: sourc
+* @n: n
+* Return: @dest
 */
-int main(void)
+void reverse_array(int *a, int n);
 {
-	return (0);
+	int i;
+
+	for (i = 0; i < n/2; i++)
+	{
+		int tmp;
+		a[i] = tmp;
+		a[i] = a[n-i];
+		a[n-i] = tmp;
+	}
 }
