@@ -1,11 +1,11 @@
 /**
-* _memcpy - does some thing
+* _strncpy - does some thing
 * @dest: detneation
 * @src:	sourc
 * @n: n
 * Return: @dest
 */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	char *r = dest;
 	int i;
