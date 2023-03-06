@@ -1,9 +1,14 @@
-#include <stdio.h>
 /**
-* main - does some thing
-* Return: 0
+* _strchr - does some thing
+* @dest: detneation
+* @src:	sourc
+* @n: n
+* Return: @dest
 */
-int main(void)
+char *_strchr(char *s, char c)
 {
-	return (0);
+	for (; *s && *s != c; s++)
+		;
+
+	return (*s || *s == c  ? s : NULL);
 }
