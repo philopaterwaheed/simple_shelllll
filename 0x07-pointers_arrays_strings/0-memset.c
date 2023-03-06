@@ -1,4 +1,3 @@
-#include "main.h"
 /**
 * _memset - does some thing
 * @s: ref
