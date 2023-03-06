@@ -1,9 +1,16 @@
 #include <stdio.h>
 /**
-* main - does some thing
+* _memset - does some thing
+* @s: ref
+* @b: ref
+* @n: int
 * Return: 0
 */
-int main(void)
+char *_memset(char *s, char b, unsigned int n)
 {
-	return (0);
+	int i = 0;
+
+	for (; i < n; i++)
+		*(s + i) = b;
+	return (s);
 }
