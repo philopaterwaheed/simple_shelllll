@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h" 
 /**
 * void _puts_recursion - does some thing
 * @s: str
