@@ -1,9 +1,11 @@
 #include <stdio.h>
 /**
-* main - does some thing
+* void _puts_recursion - does some thing
 * Return: 0
 */
-int main(void)
+void _puts_recursion(char *s)
 {
-	return (0);
+	if (*s != '\0')
+		return;
+	_puts_recursion(s ++);
 }
