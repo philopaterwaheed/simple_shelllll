@@ -1,9 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
+* factorial - does some thing
+* @n: num
 * Return: 0
 */
-int main(void)
+int factorial(int n)
 {
-	return (0);
+	if (n == 0)
+	{
+		return (1);
+	}
+
+	return (factorial(n - 1) * n);
 }
