@@ -1,9 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
+* _pow_recursion - does some thing
+* @y: num
+* @x: num
 * Return: 0
 */
-int main(void)
+int _pow_recursion(int x, int y)
 {
-	return (0);
+	if (y == 0)
+		return (1);
+	else if (y < 0)
+		return (-1);
+	return (_pow_recursion() * x);
 }
