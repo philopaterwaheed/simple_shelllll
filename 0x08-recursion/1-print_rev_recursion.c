@@ -1,9 +1,17 @@
-#include <stdio.h>
+#include "main.h"
 /**
-* main - does some thing
+* _puts_recursion - does some thing
+* @s: str
 * Return: 0
 */
-int main(void)
+void _puts_recursion(char *s)
 {
-	return (0);
+	if (*s == '\0')
+	{
+		_putchar('\n');
+		return;
+	}
+
+	_puts_recursion(s + 1);
+	_putchar(*s);
 }
