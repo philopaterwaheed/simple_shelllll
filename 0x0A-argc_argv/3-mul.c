@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
 * main - does some thing
 * @argc: argv
@@ -7,12 +8,16 @@
 */
 int main(int argc, char **argv)
 {
-	if (argc == 1)
+	int x, y;
+	if (argc < 3)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
+
+	y = atoi(argv[1]); 
+	x = atoi(argv[2]);
+	printf("%d\n", x * y);
 	
-	printf("%s\n", argv[1] * argv[2]);
 	return(0);
 }
