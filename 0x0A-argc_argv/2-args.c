@@ -1,9 +1,15 @@
 #include <stdio.h>
 /**
 * main - does some thing
+* @argc: argv
+* @argv: argc
 * Return: 0
 */
-int main(void)
+int main(int argc, char **argv)
 {
+	int i;
+
+	for (i = 1; i < argc; i++)
+		printf("%s\n", argv[i]);
 	return (0);
 }
