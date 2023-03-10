@@ -1,9 +1,18 @@
 #include <stdio.h>
 /**
 * main - does some thing
+* @argc: argv
+* @argv: argc
 * Return: 0
 */
-int main(void)
+int main(int argc, char **argv)
 {
-	return (0);
+	if (argc == 1)
+	{
+		printf("Error");
+		return (1);
+	}
+	
+	printf("%s\n", argv[1] * argv[2]);
+	return(0);
 }
