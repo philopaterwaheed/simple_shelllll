@@ -23,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 	if (s1)
 		strcpy(o, s1);
 	if (s2)
-		strcpy(o + len1, s2);	
+		strcpy(o + len1, s2);
 	o[len1 + len2] = '\0';
 	return (o);
 }
