@@ -10,7 +10,6 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *o;
-	int i;
 	int len1;
 	int len2;
 
@@ -23,6 +22,6 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	strcpy(o, s1);
 	strcpy(o + len1, s1);
-	o[len1 + len2] ;
+	o[len1 + len2] = '\0';
 	return (o);
 }
