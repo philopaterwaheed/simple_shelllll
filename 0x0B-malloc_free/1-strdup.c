@@ -1,9 +1,21 @@
-#include <stdio.h>
+#include "main.h"
+#include <string.h>
+#include <stdlib.h>
 /**
-* main - does some thing
+* create_array - does some thing
+* @size: size
+* @c: char
 * Return: 0
 */
-int main(void)
+char *create_array(unsigned int size, char c)
 {
-	return (0);
+	char *o;
+
+	if (!size)
+		return (NULL);
+
+	o = malloc(size * sizeof(char));
+	if (c)
+		memset(o, c, size);
+	return (o);
 }

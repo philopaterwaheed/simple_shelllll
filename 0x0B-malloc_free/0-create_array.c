@@ -15,7 +15,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 
 	o = malloc(size * sizeof(char));
-	if (c)
+	if (o)
 		memset(o, c, size);
 	return (o);
 }
