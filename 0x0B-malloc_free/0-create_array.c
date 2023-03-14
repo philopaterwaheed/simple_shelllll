@@ -9,10 +9,10 @@
 */
 char *create_array(unsigned int size, char c)
 {
+	char *o;
+
 	if (!size)
 		return (NULL);
-
-	char *o;
 
 	o = malloc(size * sizeof(char));
 	memset(o, c, size);
