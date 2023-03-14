@@ -15,11 +15,10 @@ char *str_concat(char *s1, char *s2)
 
 
 	len1 = !s1 ? 0 : strlen(s1);
-	len2 = !s2 ? 0 : strlen(s2);	
+	len2 = !s2 ? 0 : strlen(s2);
 	o = malloc(len1 + len2 + 1);
 	if (!o)
 		return (NULL);
-
 	if (s1)
 		strcpy(o, s1);
 	if (s2)
