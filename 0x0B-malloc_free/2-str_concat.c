@@ -1,9 +1,28 @@
-#include <stdio.h>
+#include "main.h"
+#include <string.h>
+#include <stdlib.h>
 /**
-* main - does some thing
+* str_concat - does some thing
+* @s1: size
+* @s2: size
 * Return: 0
 */
-int main(void)
+char *str_concat(char *s1, char *s2)
 {
-	return (0);
+	char *o;
+	int i;
+	int len1;
+	int len2;
+
+	if (!s1 || !s2)
+		return (NULL);
+	len1 = strlen(s1);
+	len2 = strlen(s2);
+	o = malloc(len1 + len2 + 1);
+	if (!o)
+		return (NULL);
+	strcpy(o, s1);
+	strcpy(o + len1, s1);
+	o[len1 + len2] ;
+	return (o);
 }
