@@ -14,14 +14,17 @@ char *_strdup(char *str)
 
 	len = strlen(str);
 	o = malloc(len * sizeof(char));
+	if (!o)
+		return (NULL);
 	if (o)
 	{
 		for (i = 0;;i++)
 		{
-			*(o + i) = *(str + i);
+			o[i] = str[i];
 			if (! *str)
 				break;
 		}
 	}
+
 	return (o);
 }
