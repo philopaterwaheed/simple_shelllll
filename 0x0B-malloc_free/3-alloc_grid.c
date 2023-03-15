@@ -9,24 +9,20 @@
 */
 int **alloc_grid(int width, int height)
 {
-	int **o;
-	int len;
-	int i;
+	int len, i;
+	int **nums, *ptr;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
 
-	len = sizeof(int *) * height;	
-	o = calloc(0, len);
-	if (!o)
-		return (NULL);
-	if (o)
+	len = sizeof(int *) * height + sizeof(int) * width * height;
+	nums = calloc(1, len);
+	if (nums)
 	{
-		for (i = 0; i < height ; i++)
-		{
-			o[i] = calloc(0, sizeof(int *) * width);
-		}
+		ptr = (int *)(nums + height);
+		for (i = 0; i < height; i++)
+			nums[i] = ptr + width * i;
 	}
 
-	return (o);
+	return (nums);
 }
