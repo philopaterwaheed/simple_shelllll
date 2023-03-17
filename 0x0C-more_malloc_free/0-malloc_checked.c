@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdlib.h> 
 /**
 * malloc_checked - does some thing
 * @b: b
