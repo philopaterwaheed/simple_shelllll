@@ -1,11 +1,13 @@
 /**
- * print_name - prints a name using util function @f
- * @name: the name characters to print
- * @f: the util function to print the name
+ * print_name - a function that prints a name.
+ * @name: the name given
+ * @f: function of name
+ *
+ * Rteurn: void
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (f)
-		(*f)(name);
-}
+	if (name != NULL && f != NULL)
 
+		f(name);
+}
