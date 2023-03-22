@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
 * print_name - does some thing
 * @f: pointer
