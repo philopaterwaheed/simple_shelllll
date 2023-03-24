@@ -1,5 +1,3 @@
-#include "main.h"
-#include <string.h>
 #include <stdarg.h>
 /**
 * sum_them_all - does some thing
