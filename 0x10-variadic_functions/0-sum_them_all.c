@@ -1,7 +1,8 @@
 #include <stdarg.h>
 /**
 * sum_them_all - does some thing
-* @n: char
+* @n: chari
+*
 * Return: 0
 */
 int sum_them_all(const unsigned int n, ...)
@@ -15,7 +16,7 @@ int sum_them_all(const unsigned int n, ...)
 
 	va_start(list, n);
 
-	for (i = 0; i < n; i++)
+	for (i = 0, sum = 0; i < n; i++)
 		sum += va_arg(list, int);
 
 	va_end(list);
