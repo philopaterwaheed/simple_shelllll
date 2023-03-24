@@ -16,7 +16,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		return (0);
 
 	va_start(list, n);
-	for (i = 0, sum = 0; i < n; i++)
+	for (i = 1, sum = 0; i <= n; i++)
 	{
 		printf ("%d", va_arg(list, int);
 		if (i != n && separator)
