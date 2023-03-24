@@ -1,27 +1,26 @@
-#include <stdarg.h>
 #include <stdio.h>
+#include <stdarg.h>
+
 /**
-* print_numbers - does some thing
-* @separator: separator
-* @n: chari
-*
-* Return: 0
-*/
+ * print_numbers - print all arguments with @separator followed by newline
+ * @separator: cstring to be used as separator between each argument
+ * @n: number of arguments
+ * Description:
+ * print @n number arguments with @separator between each one.
+ * ends the output with a newline
+ */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	va_list list;
+	va_list ap;
 
-	if (n <= 0)
-		return (0);
-
-	va_start(list, n);
-	for (i = 1, sum = 0; i <= n; i++)
+	va_start(ap, n);
+	for (i = 1; i <= n; i++)
 	{
-		printf ("%d", va_arg(list, int);
+		printf("%d", va_arg(ap, int));
 		if (i != n && separator)
 			printf("%s", separator);
 	}
 	putchar('\n');
-	va_end(list);
+	va_end(ap);
 }
