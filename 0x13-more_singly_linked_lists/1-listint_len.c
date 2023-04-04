@@ -1,9 +1,19 @@
+#include "lists.h"
 #include <stdio.h>
 /**
-* main - does some thing
+* listint_len - does some thing
+* @h: l
 * Return: 0
 */
-int main(void)
+size_t listint_len(const listint_t *h)
 {
-	return (0);
+	size_t count = 0;
+
+	while (h)
+	{
+		printf("%d\n", h->n);
+		h = h->next;
+		count++;
+	}
+	return (count);
 }
