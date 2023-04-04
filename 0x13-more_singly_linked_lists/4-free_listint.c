@@ -1,9 +1,11 @@
+#include "lists.h"
 #include <stdio.h>
 /**
-* main - does some thing
+* free_listint - does some thing
+* @h: l
 * Return: 0
 */
-int main(void)
+void free_listint(listint_t *head)
 {
-	return (0);
+	free (head);
 }
