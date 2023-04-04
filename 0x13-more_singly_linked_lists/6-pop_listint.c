@@ -13,11 +13,6 @@ int pop_listint(listint_t **head)
 
 	if (head == NULL)
 		return (0);
-	node = malloc(sizeof(listint_t));
-	if (node == NULL)
-		return (NULL);
-	node->n = n;
-	node->next = NULL;
 	if (*head == 0)
 	{
 		return (0);
