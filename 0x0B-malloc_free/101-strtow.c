@@ -38,7 +38,7 @@ char **strtow(char *str)
 	for (i = 0; i < count; i++)
 	{
 		int length = strcspn(str, " ");
-		
+
 		words[i] = calloc(length + 1, sizeof(char));
 		if (!words[i])
 			goto cle;
