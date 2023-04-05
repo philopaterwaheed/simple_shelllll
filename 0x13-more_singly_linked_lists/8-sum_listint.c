@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
 * sum_listint - does some thing
-* @h: l
+* @head: l
 * Return: 0
 */
 int sum_listint(listint_t *head)
