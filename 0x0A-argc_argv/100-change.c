@@ -33,7 +33,7 @@ int main(int argc, char **argv)
 				if (r >= cen[i])
 				{
 					c += r / cen[i];
-					r = total % cen[i];
+					r = r % cen[i];
 				}
 			}
 		}
