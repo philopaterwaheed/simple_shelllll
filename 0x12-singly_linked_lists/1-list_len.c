@@ -4,7 +4,7 @@
 /**
  * list_len - prints
  * @h: the first
- * Return: the size 
+ * Return: the size
  */
 size_t list_len(const list_t *h)
 {
