@@ -1,9 +1,18 @@
+#include "lists.h"
 #include <stdio.h>
 /**
-* main - does some thing
+* sum_listint - does some thing
+* @h: l
 * Return: 0
 */
-int main(void)
+int sum_listint(listint_t *head)
 {
-	return (0);
+	size_t count = 0;
+
+	while (head)
+	{
+		count += head->n;
+		head = head->next;
+	}
+	return (count);
 }
