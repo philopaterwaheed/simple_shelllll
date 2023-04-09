@@ -9,5 +9,5 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-        _putchar((n & 1 << index) + '0');
+	_putchar((n & 1 << index) + '0');
 }
