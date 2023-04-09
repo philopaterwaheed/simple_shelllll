@@ -13,6 +13,7 @@ unsigned int binary_to_uint(const char *b)
 
 	if (!b)
 		return (n);
+
 	for (i = strlen(b) - 1, box = 1; (int)i >= 0; i--, box *= 2)
 		if (b[i] == '1')
 			n += box;
