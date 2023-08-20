@@ -17,3 +17,17 @@ char *_strchr(char *s, char c)
 
 	return (NULL);
 }
+/**
+ * _strcmp - comp 2 strings
+ * @s1: s1
+ * @s2: s1
+ *
+ * Return 0 if s1 = s2
+ */
+int _strcmp(char *s1, char *s2)
+{
+	for (; *s1 && *s2 && *s1 == *s2; s1++, s2++)
+	{}
+
+	return (*s1 - *s2);
+}
