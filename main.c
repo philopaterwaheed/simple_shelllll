@@ -47,5 +47,10 @@ int main(int argc, char *argv[])
 		return (*_retu);
 	}
 	(void) name;
-	return (0);
+	while (1==1)
+		{
+			write(STDOUT_FILENO, "$ ", 2);
+
+		}
+	return (*_retu);
 }
