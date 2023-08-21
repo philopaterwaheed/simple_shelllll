@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _strchr - finds c string.
  * @s: str
