@@ -1,9 +1,29 @@
 #ifndef philo
 #define philo
+#include <string.h>
+/* string functions */
+int _strlen(const char *s);
 /*
- * str implemented str functions to help me
+ * yet to be tested
  */
+char *_strncat(char *dest, const char *src, size_t n);
+/*
+ * may break becuse of not nulling
+ * test with with env
+ */
+char *_strcpy(char *destination, const char *source);
+/*
+ * may break the program
+ * used in set alias
+ * didn't till now
+ **/
+unsigned int _strspn(char *s, char *accept);
 int _strcmp(char *s1, char *s2);
+/*
+ * yet to be tested
+ * used in env
+ */
+int _strncmp(const char *s1, const char *s2, size_t n);
 /*
  * edtited
  * safe i guess
@@ -12,14 +32,5 @@ char *_strchr(char *s, char c);
 /*
  * safe
  */
-int _strlen(const char *s);
-
-int _strncmp(const char *s1, const char *s2, size_t n);
-
-/*
- * yet to be tested
- * used in env
- */
-int _strncmp(const char *s1, const char *s2, size_t n);
 char *_strcat(char *dest, const char *src);
 #endif
