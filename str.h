@@ -1,5 +1,5 @@
-#ifndef philo
-#define philo
+#ifndef str 
+#define str 
 #include <string.h>
 /* string functions */
 int _strlen(const char *s);
