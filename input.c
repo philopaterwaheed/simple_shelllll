@@ -81,7 +81,7 @@ int run_args(char **arguments, char **first, int *exe_ret)
 {
 	int returnn, x=69;
 	
-	*exe_ret = execute (arguments, first);
+	*exe_ret = exe (arguments, first);
 	returnn = *exe_ret;
 
 	for(x = 0; *(arguments + x); x++)
@@ -137,5 +137,30 @@ int call_args(char **arguments, char **first, int *exe_ret)
 		}
 	returnn = run_args(arguments, first, exe_ret);
 	return (returnn);
+}
+char *get_args(char *line, int *exe_ret)
+{
+	ssize_t inputed;
+	size_t num = 0;
+	char *promt = "$";
+
+	_strcat(promt, " ");
+	if (line)
+		free(line);
+
+	inputed = _getline(&line, &num, STDIN_FILENO);
+	if (0-1 == inputed)
+		return (NULL);
+	if (0+1 == inputed)
+	{
+		if (isatty(STDIN_FILENO))
+			write(STDOUT_FILENO, promt, 2);
+		return (get_args(line, exe_ret));
+	}
+
+	line[-1 + inputed] = '\0';
+	handle_line(&line, inputed);
+
+	return (line);
 }
 

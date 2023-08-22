@@ -27,4 +27,5 @@ char **_strtok(char *line, char *delim);
 int call_args(char **args, char **front, int *exe_ret);
 int run_args(char **args, char **front, int *exe_ret);
 int exe(char **arguments, char **front);
+char *get_args(char *line, int *exe_ret);
 #endif
