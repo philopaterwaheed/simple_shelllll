@@ -1,73 +1,70 @@
 #include "main.h"
 /**
- * _strcat - concatenates strings @dest and @src to @dest
- * @dest: the string to append @src to
- * @src: the string to be appended to @dest
- * Return: pointer to @dest
+ * _strcat - add a string to anthorer
+ * @destination: to be added to @src
+ * @srcoure: to be adeed to @destination
+ * Return: destination
  */
-char *_strcat(char *dest, char *src)
+char *_strcat(char *destination, const char *srcoure)
 {
-	char *p = dest;
+	char *destTmp;
+	const char *srcTmp;
 
-	/* move dest pointer to the end of the string */
-	for (; *dest; dest++)
-		{}
-	/* copy from src to dest */
-	for (; *src; src++, dest++)
-		*dest = *src;
-	/* set null char at the new end */
-	*dest = 0;
-	return (p);
+	destTmp = destination;
+	srcTmp =  srcoure;
+
+	while (*destTmp != '\0')
+		destTmp++;
+
+	while (*srcTmp != '\0')
+		*destTmp++ = *srcTmp++;
+	*destTmp = '\0';
+	return (destination);
 }
 /**
- * _strncat - concatenates strings @dest and @src to @dest with @n bytes limit
- * @dest: the string to append @src to
- * @src: the string to be appended to @dest
- * @n: number of bytes to be copied from @src to @dest
- * Return: pointer to @dest
+ * _strncat - addes only n to the string
+ * @destination: to be added to destination
+ * @src: to be appended to destination
+ * @n: the amunt
  */
-char *_strncat(char *dest, const char *src, size_t n)
+char *_strncat(char *destination, const char *src, size_t n)
 {
-	char *p = dest;
+	
+	size_t dest_ln = _strlen(destination);
+	size_t i;
 
-	/* move dest pointer to the end of the string */
-	for (; *dest; dest++)
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		destination[dest_ln + i] = src[i];
+	destination[dest_ln + i] = '\0';
 
-	/* copy from src to dest */
-	for (; *src && n > 0; src++, dest++, n--)
-		*dest = *src;
-	/* set null char at the new end */
-	*dest = 0;
-	return (p);
+	return (destination);
 }
 /**
- * _strspn - a function that gets the length of a prefix substring
- *
- * @s: the initial segment of
- *
- * @accept: which consist only of bytes from
- *
- * Return: the number of bytes
+ * str_duplicate - repredios a sting to a one like it
+ * @string: to be added to destination
  */
-
-unsigned int _strspn(char *s, char *accept)
+char *str_duplicate(char *string)
 {
-	int z = 0, x, y;
+	char *result;
+	int length, i;
 
-	for (x = 0; s[x] != '\0'; x++)
+	if (string == N)
+		return (N);
+
+	length = _strlen(string) + 1;
+
+	result = malloc(sizeof(char) * length);
+
+	if (result == N)
 	{
-		if (s[x] != 32)
-		{
-			for (y = 0; accept[y] != '\0'; y++)
-			{
-				if (s[x] == accept[y])
-					z++;
-			}
-		}
-		else
-			return (z);
+		errno = ENOMEM;
+		perror("Error");
+		return (N);
 	}
-		return (z);
+	for (i = 0; i < length ; i++)
+	{
+		result[i] = string[i];
+	}
 
+	return (result);
 }
-
