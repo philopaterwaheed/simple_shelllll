@@ -1,3 +1,3 @@
 all :
-	gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+	gcc -Wall -Werror -Wextra -pedantic -g -std=gnu89 *.c -o hsh
 
