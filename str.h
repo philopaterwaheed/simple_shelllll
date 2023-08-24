@@ -27,7 +27,7 @@ int _strncmp(const char *s1, const char *s2, size_t n);
  * edtited
  * safe i guess
  */
-char *_strchr(char *s, char c);
+
 /*
  * safe
  */
