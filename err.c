@@ -9,7 +9,7 @@ int c_error(char **arguments, int err)
 {
 	char *error;
 	/*
-		checks the error code
+	 * checks the error code
 	*/
 	switch (err)
 	{
@@ -135,17 +135,17 @@ char *_itoa(int num)
  * @x: the number to be counted
  * Return: the len
  */
-int num_len (int x)
+int num_len(int x)
 {
-	
-	int len =0;
+
+	int len = 0;
 
 	if (x < 0)
-		x*=-1;
-	while(x)
+		x *= -1;
+	while (x)
 	{
 		len++;
-		x/=10;
+		x /= 10;
 	}
 	return (len);
 }

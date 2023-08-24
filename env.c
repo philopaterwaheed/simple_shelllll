@@ -8,25 +8,20 @@ char **_getenv(const char *var)
 {
 	int idx, l;
 
-	l= _strlen(var);
+	l = _strlen(var);
 	for (idx = 0; environ[idx]; idx++)
 	{
 		if (_strncmp(var, environ[idx], l) == 0)
 		{
-				
-			/*
-			write(STDOUT_FILENO, "fp", 2);
-			*/
 			return (&environ[idx]);
 
-	 	}
+		}
 	}
 
 	return (N);
 }
 /**
- * __copyenv- copies the env into a new variable
- * @var: the string.
+ * _copyenv- copies the env into a new variable
  * Return: the env variables
  */
 char **_copyenv(void)
@@ -42,9 +37,6 @@ char **_copyenv(void)
 
 	for (idx = 0; environ[idx]; idx++)
 	{
-		/*
-		 * puts every thing in a new env 
-		 */
 		n_environ[idx] = malloc(_strlen(environ[idx]) + 1);
 
 		if (!n_environ[idx])
