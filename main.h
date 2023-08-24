@@ -27,7 +27,7 @@ void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t b);
 char **_getenv(const char *var);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 int handle_args(int *exe_ret);
-char *get_input(char *input, int *returnn);
+char *get_input(char *input, int *philo_retunn);
 void *_memcpy(void *dest, void *src, unsigned int nbytes);
 void *_realloc(void *ptr, unsigned int old, unsigned int new_);
 void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t b);

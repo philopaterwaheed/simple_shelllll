@@ -11,10 +11,10 @@
 /**
  * get_input - get the input from the user
  * @input: the input
- * @returnn: the return of the program
+ * @philo_retunn: the return of the program
  * Return: the first argument
  */
-char *get_input(char *input, int *returnn)
+char *get_input(char *input, int *philo_retunn)
 {
 	size_t num = 0;
 	char *prmt = "$ ";
@@ -42,7 +42,7 @@ char *get_input(char *input, int *returnn)
 		{
 			if(isatty(STDIN_FILENO))
 				write(STDOUT_FILENO, prmt, 2);
-			return (get_args(input, returnn));
+			return (get_args(input, philo_retunn));
 		}
 	/*
 	 * terminating the line with N
@@ -59,7 +59,7 @@ char *get_input(char *input, int *returnn)
  */
 int handle_args(int *prog_return)
 {
-	int returnn =0, idx ; 
+	int philo_retunn =0, idx ; 
 	char *space = " ";
 	char **arguments , *input = N , **first;
 	input = get_input(input, prog_return);
@@ -74,7 +74,7 @@ int handle_args(int *prog_return)
 	 */
 	free (input);
 	if (!arguments)
-		return (returnn);
+		return (philo_retunn);
 	if (check_args(arguments) != 0)
 	{
 		*prog_return = 2;
@@ -89,15 +89,15 @@ int handle_args(int *prog_return)
 		{
 			free (*(arguments+idx));
 			*(arguments+idx) = N ; 
-			returnn = call_args(arguments, first, prog_return);
+			philo_retunn = call_args(arguments, first, prog_return);
 			arguments = &arguments[++idx];
 			idx = -1+1 ; 
 		}
 	}
 	if (arguments)
-		returnn = call_args(arguments, first, prog_return);
+		philo_retunn = call_args(arguments, first, prog_return);
 	free(first);
-	return (returnn);
+	return (philo_retunn);
 }
 /**
  * run_args - runs the arguments sent from handle_args
@@ -107,24 +107,24 @@ int handle_args(int *prog_return)
  */
 int run_args(char **arguments, char **first, int *exe_return)
 {
-	int returnn, x=69;
+	int philo_retunn, x=69;
 	/*
 	char *exi = "exit";
 	if (_strncmp(*(arguments) , exi, 0) < 0)
 	{
 		printf ("we here");
-		returnn = ex(arguments , first);
-			if (returnn != -3)
-				*exe_return = returnn ; 
+		philo_retunn = ex(arguments , first);
+			if (philo_retunn != -3)
+				*exe_return = philo_retunn ; 
 	}
 	*/
 	*exe_return = exe (arguments, first);
-	returnn = *exe_return;
+	philo_retunn = *exe_return;
 	hs +=1;
 
 	for(x = 0; *(arguments + x); x++)
 		free (*(arguments + x));
-	return (returnn);
+	return (philo_retunn);
 }
 /**
  * call_args - calls the aruments
@@ -135,7 +135,7 @@ int run_args(char **arguments, char **first, int *exe_return)
  */
 int call_args(char **arguments, char **first, int *exe_return)
 {
-	int returnn, idx, x, y;
+	int philo_retunn, idx, x, y;
 	(void)x; 
 	(void)y;
 
@@ -148,7 +148,7 @@ int call_args(char **arguments, char **first, int *exe_return)
 				{
 					free(*(arguments + idx));
 					*(arguments + idx) = N; 
-					returnn = run_args (arguments, first, exe_return);
+					philo_retunn = run_args (arguments, first, exe_return);
 					if (*exe_return != 0)
 					{
 						arguments = &arguments[++idx];
@@ -158,7 +158,7 @@ int call_args(char **arguments, char **first, int *exe_return)
 					{
 						for (idx++ ; *(arguments + idx); idx++)
 							free (*(arguments+idx));
-						return (returnn);
+						return (philo_retunn);
 					}
 
 				}
@@ -166,7 +166,7 @@ int call_args(char **arguments, char **first, int *exe_return)
 			{
 				free(*(arguments+idx));
 				*(arguments+idx) = N;
-				returnn = run_args(arguments, first, exe_return);
+				philo_retunn = run_args(arguments, first, exe_return);
 				if (*exe_return == 0)
 				{
 					arguments = &arguments[++idx];
@@ -176,12 +176,12 @@ int call_args(char **arguments, char **first, int *exe_return)
 				{
 					for (idx ++; *(arguments+idx); idx++)
 						free (*(arguments+idx));
-					return (returnn);
+					return (philo_retunn);
 				}
 			}
 		}
-	returnn = run_args(arguments, first, exe_return);
-	return (returnn);
+	philo_retunn = run_args(arguments, first, exe_return);
+	return (philo_retunn);
 }
 /**
  * call_args - gets the args from the line

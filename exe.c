@@ -14,7 +14,7 @@
 int exe(char **arguments, char **first)
 {
 	pid_t pid;
-	int returnn = 0, flg = 0, stts;
+	int philo_retunn = 0, flg = 0, stts;
 	char *comm = arguments [0];
 
 	if (*(comm) != '.' && *(comm) != '/')
@@ -28,9 +28,9 @@ int exe(char **arguments, char **first)
 	if (comm == N || (access(comm, F_OK) == -1))
 	{
 		if (errno == EACCES)
-			returnn = (c_error(arguments, 126));
+			philo_retunn = (c_error(arguments, 126));
 		else
-			returnn = (c_error(arguments, 127)); 
+			philo_retunn = (c_error(arguments, 127)); 
 	}
 	else{
 		pid =fork();
@@ -47,21 +47,21 @@ int exe(char **arguments, char **first)
 		{
 			execve(comm, arguments, environ);
 			if (errno == EACCES)
-				returnn = (c_error(arguments, 126));
+				philo_retunn = (c_error(arguments, 126));
 			free_env();
 			free_arguments (arguments, first);
-			_exit(returnn);
+			_exit(philo_retunn);
 		}
 		else
 		{
 			wait(&stts);
-			returnn = WEXITSTATUS(stts);
+			philo_retunn = WEXITSTATUS(stts);
 
 		}
 	}
 		if (flg)
 			free(comm);
-	return (returnn);
+	return (philo_retunn);
 }
 char *get_location(char *command)
 {
