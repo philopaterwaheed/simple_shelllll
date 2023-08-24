@@ -11,13 +11,12 @@ char *_strncat(char *dest, const char *src, size_t n);
  * may break becuse of not nulling
  * test with with env
  */
-char *_strcpy(char *destination, const char *source);
+char *_strcpy(char *dest,const char *src);
 /*
  * may break the program
  * used in set alias
  * didn't till now
  **/
-unsigned int _strspn(char *s, char *accept);
 int _strcmp(char *s1, char *s2);
 /*
  * yet to be tested
@@ -33,4 +32,5 @@ char *_strchr(char *s, char c);
  * safe
  */
 char *_strcat(char *dest, const char *src);
+char *str_duplicate(char *string);
 #endif
