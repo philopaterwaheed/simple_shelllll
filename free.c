@@ -7,25 +7,22 @@
  */
 void free_arguments(char **arguments, char **first)
 {
-	int    i;
-	printf ("hehe");
-	for (i = 0; /*arguments[i] || arguments[i + 1]*/i<= array_size(arguments); i++)
-		free(arguments[i]);
+  int i;
+  for (i = 0; /*arguments[i] || arguments[i + 1]*/ i <= array_size(arguments);
+	 i++)
+	free(arguments[i]);
 
-	free(first);
+  free(first);
 }
 /**
- * free_arguments - frees env
+ * free_env - frees env
  * Return: the first env
  */
 void free_env(void)
 {
-	/* 
-	 * i being the index
-	 */
-	int i;
+  int i;
 
-	for (i= 0; /*environ[i]*/i<= array_size(environ); i++)
-		free(environ[i]);
-	free(environ);
+  for (i = 0; /*environ[i]*/ i <= array_size(environ); i++)
+	free(environ[i]);
+  free(environ);
 }
