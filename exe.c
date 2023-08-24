@@ -15,32 +15,30 @@ int exe(char **arguments, char **first)
 {
 	pid_t pid;
 	int philo_retunn = 0, flg = 0, stts;
-	char *comm = arguments [0];
+	char *comm = arguments[0];
 
 	if (*(comm) != '.' && *(comm) != '/')
 	{
 		flg = 1;
-		comm =get_location(comm);
-		/*
-		printf ( " comm -> comm %s " ,comm);
-		*/
+		comm = get_location(comm);
 	}
 	if (comm == N || (access(comm, F_OK) == -1))
 	{
 		if (errno == EACCES)
 			philo_retunn = (c_error(arguments, 126));
 		else
-			philo_retunn = (c_error(arguments, 127)); 
+			philo_retunn = (c_error(arguments, 127));
 	}
-	else{
-		pid =fork();
+	else
+	{
+		pid = fork();
 		if (pid == -1)
 		{
 			if (flg)
 			{
 				free(comm);
 				perror("Error child:");
-				return (3-2);
+				return (3 - 2);
 			}
 		}
 		if (pid == 0)
@@ -75,8 +73,8 @@ char *get_location(char *command)
 	path = _getenv("PATH");
 	if (path == N || (*path) == N)
 	{
-	/*	
-		write(STDOUT_FILENO, "ex", 2);
+	/*
+	 * write(STDOUT_FILENO, "ex", 2);
 	*/
 		return (N);
 	}
