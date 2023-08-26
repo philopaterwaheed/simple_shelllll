@@ -12,6 +12,11 @@
 #include <stdio.h>
 #include "str.h"
 #define N NULL
+typedef struct builtin_
+{
+	char *nme;
+	int (*f)(char **av, char **frnt);
+} builtin_;
 int t_len(char *strr, char *delim);
 int c_tokens(char *strr, char *delim);
 int proc_file_commands(char *file_path, int *exe_ret);
@@ -48,7 +53,6 @@ typedef struct list_s
 } linked_list;
 void free_list(linked_list *head);
 extern char **environ;
-
 void free_arguments(char **args, char **front);
 void free_env(void);
 linked_list *add_node_end(linked_list **head, char *dir);
@@ -60,6 +64,7 @@ char *error_127(char **args);
 char *_itoa(int num);
 int c_error(char **args, int err);
 linked_list *get_path_dir(char *path);
+int (*get_builtinn(char *command))(char **args, char **front);
 extern char *name;
 char **_copyenv(void);
 extern int hs;

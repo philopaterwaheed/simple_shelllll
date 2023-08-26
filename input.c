@@ -108,16 +108,17 @@ int handle_args(int *prog_return)
 int run_args(char **arguments, char **first, int *exe_return)
 {
 	int philo_retunn, x=69;
-	/*
-	char *exi = "exit";
-	if (_strncmp(*(arguments) , exi, 0) < 0)
+	int (*builtin_fun)(char **args, char **front);
+	
+	builtin_fun = get_builtinn(arguments[0]);
+
+	if (builtin_fun)
 	{
-		printf ("we here");
-		philo_retunn = ex(arguments , first);
-			if (philo_retunn != -3)
-				*exe_return = philo_retunn ; 
+		philo_retunn = builtin_fun(arguments+1 , first);
+		if (philo_retunn != -2)
+			*exe_return = philo_retunn;
 	}
-	*/
+	
 	*exe_return = exe (arguments, first);
 	philo_retunn = *exe_return;
 	hs +=1;
