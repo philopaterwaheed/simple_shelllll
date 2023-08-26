@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _ex - the exit function 
+ * ex - the exit function
  * @arguments: the arguments inputed
  * @first: the first char to the commands
  * Return: the string of the number
@@ -10,7 +10,6 @@ int ex(char **arguments, char **first)
 	int i, len_of_int = 10;
 	unsigned int num = 0, max = 1 << (si(int) * 8 - 1);
 
-	printf ("entered");
 	if (arguments[0])
 	{
 		if (arguments[0][0] == '+')

@@ -26,10 +26,11 @@ char *_strcat(char *destination, const char *srcoure)
  * @destination: to be added to destination
  * @src: to be appended to destination
  * @n: the amunt
+ * Return: str
  */
 char *_strncat(char *destination, const char *src, size_t n)
 {
-	
+
 	size_t dest_ln = _strlen(destination);
 	size_t i;
 
@@ -42,6 +43,7 @@ char *_strncat(char *destination, const char *src, size_t n)
 /**
  * str_duplicate - repredios a sting to a one like it
  * @string: to be added to destination
+ * Return: str
  */
 char *str_duplicate(char *string)
 {

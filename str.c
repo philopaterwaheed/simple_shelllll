@@ -53,14 +53,14 @@ int _strncmp(const char *string1, const char *string2, size_t n)
 }
 /**
  * _strcpy - copy a string to anthor.
- * @string1: string.
- * @string2: string.
+ * @detination: string.
+ * @src: string.
  * used in env
  * Return: the detination.
  */
-char *_strcpy(char *detination,const char *src)
+char *_strcpy(char *detination, const char *src)
 {
-	
+
 	int i = 0;
 
 	for (i = 0; src[i]; i++)

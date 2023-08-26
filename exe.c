@@ -49,15 +49,12 @@ int exe(char **arguments, char **first)
 			free_env();
 			free_arguments (arguments, first);
 			_exit(philo_retunn);
-		}
-		else
+		} else
 		{
 			wait(&stts);
 			philo_retunn = WEXITSTATUS(stts);
-
 		}
-	}
-		if (flg)
+	} if (flg)
 			free(comm);
 	return (philo_retunn);
 }

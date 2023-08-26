@@ -10,13 +10,13 @@
  */
 unsigned int is_delim(char c, char *delim)
 {
-    while(*delim != '\0')
-    {
-        if(c == *delim)
-            return 1;
-        delim++;
-    }
-    return 0;
+	while (*delim != '\0')
+	{
+		if (c == *delim)
+			return (1);
+		delim++;
+	}
+	return (0);
 }
 /**
  * my_strtok - for my own tokinizing
@@ -60,6 +60,12 @@ char *my_strtok(char *line, char *delim)
 	}
 	return (copystr);
 }
+/**
+ * t_len- tokinizing the string inputed
+ * @strr: the string to be toknized.
+ * @delim: The delimiter character.
+ * Return: The number of words contained within str.
+ */
 int t_len(char *strr, char *delim)
 {
 	int idx = 0, len = 0;
@@ -96,41 +102,6 @@ int c_tokens(char *strr, char *delim)
 	}
 	return (tokens);
 }
-/*
-char **_strtokchar *line, char *delim)
-{
-	char **args = N;
-	int len, i, j, counter =2;
-
-	len = _strlen(line);
-	if (len)
-		{
-			if (line [len -1] == '\n')
-				line [len -1] = '\0';
-		}	
-	
-	for (i = 0; line[i]; i++)
-	{
-		for (j = 0; delim[j]; j++)
-		{
-			if (line[i] == delim[j])
-				counter++;
-		}
-	}
-	args = malloc(si(char*) * counter);
-	if (args == N)
-	{
-		handle errors 
-	}
-	i=0;
-	args[i] = strdup (my_strtok(line, delim));
-	while (args[++i] != N) {
-	write(STDOUT_FILENO, "philo ",1);
-	args[i] = strdup(my_strtok(line, delim));
-	}
-return (args);
-}
-*/
 /**
  * _strtok - tokinizing the string inputed
  * @line: the string to be toknized.
