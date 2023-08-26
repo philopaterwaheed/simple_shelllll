@@ -19,8 +19,8 @@ void *_memcpy(void *dest, void *src, unsigned int nbytes)
 /**
  * _realloc - realloc implementation
  * @ptr: newwory allocated.
- * @old_size: space
- * @new: new newwory
+ * @old: space
+ * @new_: new newwory
  * Return: meomery
  */
 void *_realloc(void *ptr, unsigned int old, unsigned int new_)
@@ -34,7 +34,7 @@ void *_realloc(void *ptr, unsigned int old, unsigned int new_)
 		free(ptr);
 		return (NULL);
 	}
-	if (old== new_)
+	if (old == new_)
 		return (ptr);
 	neww = malloc(new_);
 	if (!neww)
@@ -99,11 +99,9 @@ ssize_t _get_line(char **lineptr, size_t *n, FILE *stream)
 	else
 		return (-1);
 	input = 0;
-
 	buffer = malloc(sizeof(char) * 120);
 	if (!buffer)
 		return (-1);
-
 	while (c != '\n')
 	{
 		r = read(STDIN_FILENO, &c, 1);
@@ -117,17 +115,13 @@ ssize_t _get_line(char **lineptr, size_t *n, FILE *stream)
 			input++;
 			break;
 		}
-
 		if (input >= 120)
 			buffer = _realloc(buffer, input, input + 1);
-
 		buffer[input] = c;
 		input++;
 	}
 	buffer[input] = '\0';
-
 	assign_lineptr(lineptr, n, buffer, input);
-
 	ret = input;
 	if (r != 0)
 		input = 0;
