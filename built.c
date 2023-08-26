@@ -2,7 +2,7 @@
 int (*get_builtinn(char *command))(char **args, char **front)
 {
 	builtin_ funcs[] = {
-		{ "exit", ex },
+		{ "exit", _exit_ },
 		{"env" ,_env},
 		{ NULL, NULL }
 	};

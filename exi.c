@@ -5,7 +5,7 @@
  * @first: the first char to the commands
  * Return: the string of the number
  */
-int ex(char **arguments, char **first)
+int _exit_(char **arguments, char **first)
 {
 	int i, len_of_int = 10;
 	unsigned int num = 0, max = 1 << (si(int) * 8 - 1);
