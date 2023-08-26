@@ -36,3 +36,13 @@ int ex(char **arguments, char **first)
 	free_env();
 	exit(num);
 }
+int _env(char **arguments, char **first)
+{
+	char **env = environ;
+
+	(void) arguments;
+	(void) first; 
+	for (; *env; env++)
+		printf("%s\n", *env);
+	return (0);
+}

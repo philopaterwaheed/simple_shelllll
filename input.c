@@ -112,15 +112,16 @@ int run_args(char **arguments, char **first, int *exe_return)
 	
 	builtin_fun = get_builtinn(arguments[0]);
 
-	if (builtin_fun)
+	if (builtin_fun != NULL)
 	{
-		philo_retunn = builtin_fun(arguments+1 , first);
+		philo_retunn = builtin_fun(arguments + 1 , first);
 		if (philo_retunn != -2)
 			*exe_return = philo_retunn;
 	}
-	
+	else{
 	*exe_return = exe (arguments, first);
 	philo_retunn = *exe_return;
+	}
 	hs +=1;
 
 	for(x = 0; *(arguments + x); x++)

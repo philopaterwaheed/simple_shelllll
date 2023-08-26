@@ -68,5 +68,6 @@ int (*get_builtinn(char *command))(char **args, char **front);
 extern char *name;
 char **_copyenv(void);
 extern int hs;
+int _env(char **arguments, char **first);
 int ex(char **arguments, char **first);
 #endif
